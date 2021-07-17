@@ -14,7 +14,7 @@ weatherform.addEventListener("submit", (e) => {
 
     //document.querySelector("#year").innerText = parseInt(document.querySelector("#year").innerText) +1;
     //console.log(location)
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent  = data.error;
